@@ -1,0 +1,1 @@
+This repository contains lessons and exercises on Time Series Analysis in the data science programme at Codeup, San Antonio, Noether cohort, starting on 06 February 2023.
