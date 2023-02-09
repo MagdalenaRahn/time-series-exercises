@@ -19,13 +19,10 @@ def grocery_sales_datetime(df):
     
     # change 'sale_date' to datetime format
     df['sale_date'] = pd.to_datetime(df['sale_date'])
-
-    # setting index to now-date-formated 'sale_date'
-    df = df.set_index('sale_date')
     
-    # sort dates ascending
-    shop = shop.sort_index()
-
+    # setting 'sale_date' as index and sorting it
+    df = df.set_index('sale_date').sort_index()
+    
     # creating month col
     df['month'] = df.index.month
 
