@@ -28,9 +28,11 @@ def grocery_sales_datetime(df):
 
     # creating day col
     df['day'] = df.index.day
+    
+    df = df.rename(columns = {'sale_amount': 'quantity'})
 
     # multiplying 'sale_amount' by 'item_price' to get 'sales_total'
-    df['sales_total'] = df['sale_amount'] * df['item_price']
+    df['sales_total'] = df['quantity'] * df['item_price']
     
     return df
 
